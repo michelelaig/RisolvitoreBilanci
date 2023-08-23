@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{lipsum} % Solo per generare testo di riempimento
+
+\begin{document}
+
+\lipsum[1] % Testo di riempimento
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.4\linewidth}
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    Colonna 1 & Colonna 2 \\
+    \hline
+    A & B \\
+    C & D \\
+    \hline
+  \end{tabular}
+  \caption{Tabella 1}
+  \label{tab:tabella1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\linewidth}
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    Colonna X & Colonna Y \\
+    \hline
+    1 & 2 \\
+    3 & 4 \\
+    \hline
+  \end{tabular}
+  \caption{Tabella 2}
+  \label{tab:tabella2}
+\end{minipage}
+\end{figure}
+
+\lipsum[2] % Altro testo di riempimento
+
+\end{document}
+

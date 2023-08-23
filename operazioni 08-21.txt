@@ -1,0 +1,45 @@
+self.SP = {
+			attivita: {
+				imm_imm : {brev : 1100},
+				imm_mat : {macc : 800,impi : 2100,fabb : 450},
+				att_circ : {cred_clie : 380,banc : 90}},
+			passivita: {
+				patr_nett : {
+					cap_soc : 2500,ris_leg : 500,uti_net : 882},
+				deb : {
+					deb_forn : 660, deb_trib : 378, deb_banc:  0 }
+			}
+			}
+
+
+fai_mutuo(mastrini,1000)
+fai_sval(mastrini,macc,200)
+fai_aquisto_mat_prim(mastrini,ammontare = 180,contanti = 0,credito = 180)
+fai_vendita_prod_fin(mastrini,ammontare = 980,contanti = 0,credito = 980)
+fai_fitto_attivo(mastrini,ammontare = 48, contanti = 48, credito = 0) 
+fai_spesa(mastrini,ammontare = 45)
+
+riscuoti_credito(mastrini,ammontare = 250)
+paga_deb_forn(mastrini,ammontare = 120)
+paga_utile_azionisti(mastrini,ammontare=352.8)
+paga_deb_trib(mastrini,ammontare=378)
+acquista_marc(mastrini,ammontare = 360)
+fai_vendita_prod_fin(mastrini,ammontare = 780,contanti = 780,credito = 0)
+
+fai_aquisto_mat_prim(mastrini,ammontare = 440,contanti = 290,credito = 440-290)
+riscuoti_credito(mastrini,ammontare = 220)
+
+paga_utenze(mastrini,ammontare = 240)
+paga_stipendi(mastrini,ammontare= 960)
+fai_vendita_prod_fin(mastrini,ammontare = 630,contanti = 630,credito = 0)
+
+paga_mutuo(mastrini,totale = 67.216,intpas = 30,quo_cap = 37.216)
+rileva_rimanenze(mastrini,ammontare = 1630)
+
+#chiusura
+fai_risconto_pass(mastrini,ammontare = 12)
+fai_amm(mastrini,brev,100,True)
+fai_amm(mastrini,impi,300,False)
+fai_amm(mastrini,fabb,150,False)
+fai_amm(mastrini,macc,150,False)
+fai_amm(mastrini,marc,18,True)

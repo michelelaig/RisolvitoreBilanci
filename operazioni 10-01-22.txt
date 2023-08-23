@@ -1,0 +1,43 @@
+self.SP = {
+        
+			attivita: {
+				imm_imm : {marc : 800},
+				imm_mat : {macc : 400,impi : 1600,fabb : 600},
+				att_circ : {cred_clie : 660,banc : 189.810}},
+			passivita: {
+				patr_nett : {
+					cap_soc : 2000,ris_leg : 400,uti_net : 840},
+				deb : {
+					deb_forn : 449.810, deb_trib : 560, deb_banc:  0 }
+			}
+			}
+
+
+fai_mutuo(mastrini, 800)
+fai_sval(mastrini, macc, 200)
+fai_aquisto_mat_prim(mastrini, 260, 90, 260-90)
+fai_vendita_prod_fin(mastrini, 590,0,590)
+fai_rateo_pass(mastrini,96*10/12)
+fai_spesa(mastrini,28)
+riscuoti_credito(mastrini, 226)
+paga_deb_forn(mastrini, 130)
+acquista_brev(mastrini, 420)
+paga_utile_azionisti(mastrini, 252)
+fai_vendita_prod_fin(mastrini, 680,680,0)
+fai_aquisto_mat_prim(mastrini, 440, 290, 150)
+riscuoti_credito(mastrini, 520)
+
+paga_deb_trib(mastrini, 560)
+paga_utenze(mastrini, 150)
+fai_vendita_prod_fin(mastrini, 510,510,0)
+paga_stipendi(mastrini, 410)
+paga_mutuo(mastrini, 59.955, 12, 47.955)
+rileva_rimanenze(mastrini, 710)
+fai_accantonamento(mastrini,90)
+
+#chiusura
+fai_amm(mastrini, marc, 50, True)
+fai_amm(mastrini, macc, 40, False)
+fai_amm(mastrini, impi, 100, False)
+fai_amm(mastrini, fabb, 200, False)
+fai_amm(mastrini, brev, 21, True)

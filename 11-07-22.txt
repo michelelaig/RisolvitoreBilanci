@@ -1,0 +1,40 @@
+SP: 			{
+			attivita: {
+				imm_imm : {brev: 600},
+				imm_mat : {impi : 1400,fabb : 800},
+				att_circ : {cred_clie : 150,banc : 235}},
+			passivita: {
+				patr_nett : {
+					cap_soc : 1600,ris_leg : 320,uti_net : 650},
+				deb : {
+					deb_forn : 420, deb_trib : 195}
+			}
+			}
+
+#11-07-2022
+fai_mutuo(m,1000)
+fai_aquisto_mat_prim(m,160,100,60)
+fai_vendita_prod_fin(m,330,0,330)
+fai_fitto_passivo(m,90)
+fai_spesa(m,32)
+riscuoti_credito(m,106)
+paga_deb_forn(m,30)
+acquista_macc(m,250)
+paga_utile_azionisti(m,650*.4)
+fai_vendita_prod_fin(m,480,480,0)
+fai_aquisto_mat_prim(m,220,60,220-60)
+riscuoti_credito(m,120)
+paga_deb_trib(m,195)
+paga_utenze(m,170)
+fai_vendita_prod_fin(m,440,440,0)
+paga_stipendi(m,210)
+paga_mutuo(m,61.157,20,41.157)
+rileva_rimanenze(m,410)
+fai_accantonamento(m,90)
+
+#chiusura
+fai_risconto_att(m,30)
+fai_amm(m,brev,50,True)
+fai_amm(m,impi,100,False)
+fai_amm(m,fabb,200,False)
+fai_amm(m,macc,12.5,False)
